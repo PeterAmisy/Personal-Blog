@@ -1,0 +1,23 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>admin</title>
+</head>
+<body>
+<H1>Admin</H1>
+<p> Admin page control</p>
+<h2>Articles</h2>
+<button type="button" onclick="window.location.href='/new'">Add Article</button>
+<div>
+    <tr th:each="article: ${articles}">
+        <td th:text="${article.title}" />
+        <button type="button" onclick="window.location.href='/admin'">Delete</button>
+        <button type="button" onclick="window.location.href='/edit'">Edit</button>
+    </tr>
+</div>
+
+
+
+</body>
+</html>

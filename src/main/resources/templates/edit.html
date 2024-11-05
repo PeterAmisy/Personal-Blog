@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Update Article</h1>
+<form action="#" th:action="@{/edit}" method="post" th:object="${article}">
+    <p>Article Title: <input type="text" th:field="*{title}" /></p>
+    <p>Publishing date: <input type="text" th:field="*{date}" /></p>
+    <p>Content: <input type="text" th:field="*{content}"/> </p>
+    <p><input type="submit" value="update" /></p>
+</form>
+</body>
+</html>

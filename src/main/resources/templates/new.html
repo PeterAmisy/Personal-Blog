@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>new</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Create New Article</h1>
+<form action="#" th:action="@{/new}" method="post" th:object="${article}">
+    <p>Article Title: <input type="text" th:field="*{title}" /></p>
+    <p>Publishing date: <input type="text" th:field="*{date}" /></p>
+    <p>Content: <input type="text" th:field="*{content}"/> </p>
+    <p><input type="submit" value="Create" /></p>
+</form>
+
+</body>
+</html>
